@@ -17,7 +17,7 @@ class ShapeFileRepository:
 
     def read(self):
         """
-        Read the shape path for the stand.
+        Read the shape path and get some points.
 
         :return: the shape path points.
         """
@@ -27,7 +27,6 @@ class ShapeFileRepository:
         layer = data_source[0]  # type: ogr.Layer
 
         features = []
-
         for feature in layer:  # type: ogr.Feature
             geom = feature.GetGeometryRef()  # type: ogr.Geometry
             g = geom.GetGeometryRef(0)  # type: ogr.Geometry
