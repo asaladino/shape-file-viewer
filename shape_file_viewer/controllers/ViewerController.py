@@ -1,3 +1,5 @@
+import json
+
 import matplotlib
 
 from shape_file_viewer.repositories.ShapeFileRepository import ShapeFileRepository
@@ -8,7 +10,7 @@ import matplotlib.pyplot as plt
 
 class ViewerController:
     """
-    Loads and displays the shape file in matplot lib.
+    Loads and displays the shape file in matplotlib.
     """
 
     def __init__(self, path):
